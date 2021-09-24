@@ -1,0 +1,46 @@
+<%- include("./includ/_header.ejs") -%> 
+<a class="bg-dark text-danger px-5 py-3 mx-5 my-5" href="/create"> << || <i class="far fa-address-card"></i> inputdata </a>
+    <h1 class="text-warning text-center">User List</h1>
+    <table class="table text-center table-striped table-hover table-sm table-bordered">
+        <thead class=" text-light bg-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Modify</th>
+          </tr>
+        </thead>
+        
+        
+       
+       
+       
+        <tbody>
+         
+         <% for( let i = 0; i < user.length; i++ ) { %>
+         
+        
+         
+          <tr>
+            <th><%= i %>   </th>
+            <td><%= user[i].name %> </td>
+            <td><%= user[i].email %>  </td>
+            <td> <%= user[i].address %> </td>
+            
+            <td class="d-flex justify-content-around bg-dark">
+                <a class="bg-success text-warning"  href="/update?id=<%= user[i]._id %> "><i class="fas fa-user-edit"></i></a>
+            
+                <a class="bg-danger delete" delet="<%= user[i]._id %>"><i class="fas fa-trash-alt"></i></a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+       
+     
+       
+      </table>
+      
+   
+    <%- include("includ/_footer.ejs") %> 
+
