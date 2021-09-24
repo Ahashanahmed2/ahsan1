@@ -1,7 +1,7 @@
 const axios = require('axios')
 // route find
 exports.find = function(req, res){
-    axios.get(`${URL}/api/route`)
+    axios.get(`${process.env.URL}/api/route`)
     .then((data)=>{
    
     res.render('index',{
