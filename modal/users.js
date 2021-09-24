@@ -2,7 +2,12 @@ const mongoose = require("mongoose");
 
 let us = mongoose.Schema({
 name:{
-    type:String,
+    fname:{
+type:String
+    },
+    lname:{
+type:String
+    }
 },
 email:{
     type:String,

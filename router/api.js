@@ -15,7 +15,10 @@ if(!req.body){
     return;
 }
   const users = new Users({
-        name:req.body.name,
+        name:{
+fname:req.body.fname,
+lname:req.body.lname
+        },
         email:req.body.email,
         address:req.body.address
     })
