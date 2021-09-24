@@ -1,7 +1,7 @@
 const axios = require('axios')
 // route find
 exports.find = function(req, res){
-    axios.get(`${process.env.URL}/api/route`)
+    axios.get("https://ahsan1.herokuapp.com/api/route")
     .then((data)=>{
    
     res.render('index',{
