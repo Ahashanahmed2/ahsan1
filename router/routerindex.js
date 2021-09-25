@@ -17,5 +17,4 @@ router.post('/api/route',api.create)
 router.put('/api/route/:id',api.update)
 router.delete('/api/route/:id', api.delete)
 
-
 module.exports = router;
